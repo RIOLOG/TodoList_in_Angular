@@ -1,0 +1,27 @@
+<h1>Welcome !! Todo_List in Angular</h1>
+<h2>{{title}}</h2>
+<input type="text" placeholder="Enter a New Task" #task/>
+<br><br>
+<button (click)="addTask(task.value)" id="btn1">Add Task</button>
+
+<br>
+<h2>Work added in Todo_List</h2>
+<ul *ngFor="let item of list">
+  <li>{{item.name}}</li>
+  <button   (click)="removeTask(item.id)" id="btn2">Remove Task</button>
+</ul>
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-left">
+        <span>&copy; Made by Ankit Singh</span>
+        <a href="#" class="info-icon"><i class="fas fa-info-circle"></i></a>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/RIOLOG" class="github-icon" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
